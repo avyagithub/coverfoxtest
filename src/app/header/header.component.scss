@@ -1,0 +1,21 @@
+@use'../../theme';
+
+.navbarCustCss {
+background-color:theme.$secondraycolor!important;
+.navbar-brand  {
+  color: #fff;
+}
+button{
+  background-color:theme.$primarycolor !important;
+}
+ul {
+  li {
+    a {
+      color: #fff;
+      &:hover {
+        background-color: #1abc9c;
+      }
+    }
+  }
+}
+}

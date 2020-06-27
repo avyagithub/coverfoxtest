@@ -1,0 +1,64 @@
+@use '../../../theme';
+.textSearch {
+  border-bottom: 1px solid #28a089;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  border-top: none;
+  background: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 2rem;
+  font-size: 2rem;
+  padding: 0 0.5rem;
+  &:focus{
+    outline: none;
+  }
+  &:hover{
+    background: rgba(27, 95, 81, 0.5);
+  }
+  &::placeholder{
+
+      color: #d2ffd2;
+
+  }
+}
+.matTbale {
+  width: 100%;
+  table-layout: fixed;
+  background: theme.$tablebgColor;
+  margin-top: 3rem;
+
+}
+.matTbale th {
+  background: theme.$secondraycolor;
+  color:theme.$thColor ;
+
+}
+.matTbale td {
+  overflow: hidden;
+  width: 30%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: theme.$white;
+  a {
+    span{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    color: #8cad79;
+    padding: 0.2rem;
+  }
+}
+.matTbale th.mat-sort-header-sorted {
+  color: black;
+}
+.matPaginator {
+  background: #145d4e;
+  color: #fff !important;
+
+}
+:ng-deep .mat-select-value {
+  color: #fff;
+}

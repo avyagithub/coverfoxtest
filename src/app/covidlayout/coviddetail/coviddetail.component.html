@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-12 text-left">
+      <h2 class="p-2 text-light">
+        <button class="btn btnBack" routerLink="/covid/covidtable"><span class="material-icons">
+          arrow_back_ios
+          </span>
+        </button>
+              Showing Data for {{countryname}}</h2>
+      <mat-form-field>
+        <mat-label>Select Month</mat-label>
+        <mat-select (selectionChange)="onchange($event)">
+          <mat-option value="all">All</mat-option>
+          <mat-option *ngFor="let mnth of month" [value]="mnth">
+            {{mnth}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div *ngIf="showAlert" class="alert-danger p-3 rounded alertDanger">
+          No Data found
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+      <div class="d-flex flex-wrap flex-lg-row flex-md-row flex-column justify-content-left" *ngIf="!!countrydetail">
+        <div class="p-2 border flexBoxCustom m-2" *ngFor="let datacovid of countrydetail">
+       <h3>   {{datacovid.Date}}</h3>
+       <div class="d-flex conf">
+        <div class="confTxt">Confirmed</div>
+        <div class="flex-grow-1 congDetail">{{datacovid.Confirmed}}</div>
+      </div>
+      <div class="d-flex activeCase">
+        <div class="activeTxt">Active</div>
+        <div class="flex-grow-1 activeDetail">{{datacovid.Active}}</div>
+      </div>
+      <div class="d-flex recoverd">
+        <div class="RecoverTxt">Recoverd</div>
+        <div class="flex-grow-1 recoverDetail">{{datacovid.Active}}</div>
+      </div>
+
+      <div class="d-flex death">
+        <div class="deathTxt">Death</div>
+        <div class="flex-grow-1 deathDetail">{{datacovid.Active}}</div>
+      </div>
+
+        </div>
+        </div>
+      <!-- <mat-grid-list gutterSize="20px" cols="5" rowHeight="2:2">
+        <mat-grid-tile *ngFor="let datacovid of countrydetail">
+          <h3 class="datacss">{{datacovid.Date |date:'mediumDate'}}</h3>
+        </mat-grid-tile>
+      </mat-grid-list> -->
+    </div>
+  </div>
+
+</div>

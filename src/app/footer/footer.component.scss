@@ -1,0 +1,9 @@
+@use'../../theme';
+
+.footerbtm {
+ background-color: theme.$primarycolor;
+ min-height:80px;
+ .cppy {
+   color: #fff;
+ }
+}

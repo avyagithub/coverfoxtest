@@ -1,0 +1,109 @@
+@use'../../../theme';
+
+mat-grid-tile {
+  background:theme.$secondraycolor;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  h3 {
+    color: theme.$white;
+    font-size: 0.8rem;
+  }
+}
+/*Reusable csss*/
+%comncsss{
+  color:theme.$white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  background: theme.$confirmed;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 0.3rem;
+}
+%cmscssLeft {
+  color: theme.$white;
+  background: theme.$lbletxtbg;
+  padding: 0 0.5rem;
+  vertical-align: middle;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+/**/
+.alertDanger{
+  background: theme.$white;
+
+}
+button.btn.btnBack {
+  color: theme.$secondraycolor;
+  padding: 0rem;
+}
+button.btn.btnBack .material-icons {
+  font-size: 2rem;
+}
+.flexBoxCustom {
+  min-width: 140px;
+  min-height: 100px;
+  border-radius: 1rem;
+background-color:theme.$white;
+  h3 {
+    color: theme.$secondraycolor;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+
+  }
+  &:hover{
+    box-shadow: 1px 1px 9px -3px #000;
+    transition: all 0.2s ease-in-out;
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  /*confiremd*/
+  .conf {
+    .confTxt {
+    @extend %comncsss;
+      background: theme.$confirmed;
+
+    }
+    .congDetail {
+      @extend %cmscssLeft
+    }
+  }
+
+
+
+.activeCase {
+  margin-top: 0.8rem;
+  .activeTxt {
+    @extend %comncsss;
+    background: theme.$acivecasebg;
+
+  }
+  .activeDetail {
+    @extend %cmscssLeft;
+  }
+}
+
+.recoverd {
+  margin-top: 0.8rem;
+  .RecoverTxt {
+    @extend %comncsss;
+    background: theme.$recoverd;
+
+  }
+  .recoverDetail {
+    @extend %cmscssLeft;
+  }
+}
+
+.death {
+  margin-top: 0.8rem;
+  .deathTxt {
+    @extend %comncsss;
+    background: theme.$deatth;
+
+  }
+  .deathDetail {
+    @extend %cmscssLeft;
+  }
+}
+
+
+}

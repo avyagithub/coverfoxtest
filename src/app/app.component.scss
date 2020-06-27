@@ -1,0 +1,6 @@
+
+@use'../theme';
+.mainContainer {
+  min-height:521px;
+  background-color: theme.$primarycolor;
+}
